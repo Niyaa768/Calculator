@@ -19,3 +19,17 @@ function calculateResult() {
         document.getElementById('result').value = 'Error';
     }
 }
+
+const buttons = document.querySelectorAll('.buttons button');
+
+buttons.forEach(button => {
+    button.addEventListener('mousedown', () => {
+        button.classList.add('active');
+    });
+    button.addEventListener('mouseup', () => {
+        button.classList.remove('active');
+    });
+    button.addEventListener('mouseleave', () => {
+        button.classList.remove('active');
+    });
+});
